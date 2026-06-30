@@ -1,0 +1,74 @@
+.booking-page { min-height: 100vh; background: var(--bg); }
+.booking-nav {
+  background: var(--white); border-bottom: 1px solid var(--border);
+  padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 10;
+}
+.nav-user {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--ink3); padding: 6px 12px;
+  background: var(--bg); border-radius: 20px;
+}
+.booking-container { max-width: 680px; margin: 0 auto; padding: 40px 24px; }
+.booking-title { font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--ink); margin-bottom: 6px; }
+.booking-sub { font-size: 14px; color: var(--ink3); margin-bottom: 24px; }
+
+/* DEPT GRID */
+.dept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+.dept-card {
+  border: 1.5px solid var(--border); border-radius: var(--rl);
+  padding: 16px; cursor: pointer; background: var(--white);
+  transition: all .15s;
+}
+.dept-card:hover { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(27,79,216,.08); }
+.dept-card.selected { border-color: var(--primary); background: var(--primary-light); }
+.dept-card.inactive { opacity: .5; cursor: not-allowed; }
+.dept-card-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.dept-card-days { display: flex; gap: 4px; margin-bottom: 8px; }
+.day-dot {
+  width: 22px; height: 22px; border-radius: 50%; font-size: 10px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--ink4); border: 1px solid var(--border);
+}
+.day-dot.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.dept-card-slots { font-size: 11px; color: var(--ink4); }
+
+/* DATE GRID */
+.date-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 8px; margin-bottom: 16px; }
+.date-cell {
+  border: 1.5px solid var(--border); border-radius: var(--r);
+  padding: 10px 4px; text-align: center; cursor: pointer; background: var(--white);
+  transition: all .15s; display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.date-cell:hover:not(.disabled) { border-color: var(--primary); }
+.date-cell.selected { border-color: var(--primary); background: var(--primary); color: #fff; }
+.date-cell.disabled { opacity: .35; cursor: not-allowed; background: var(--bg); }
+.date-cell-day { font-size: 10px; font-weight: 600; color: inherit; opacity: .7; }
+.date-cell-num { font-size: 16px; font-weight: 700; }
+.date-cell-mon { font-size: 10px; opacity: .6; }
+.date-cell.selected .date-cell-day { opacity: .8; }
+
+/* SLOT INFO */
+.slot-info { padding: 12px 0; display: flex; align-items: center; }
+.slot-full { }
+
+/* CONFIRM CARD */
+.confirm-card { padding: 0; overflow: hidden; margin-bottom: 16px; }
+.confirm-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid var(--border);
+  font-size: 14px; color: var(--ink3);
+}
+.confirm-row:last-child { border: none; }
+.confirm-row strong { color: var(--ink); }
+.total-row { background: var(--bg); }
+
+/* BKASH NOTE */
+.bkash-note {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 16px; background: #FFF4F8; border: 1px solid #FFD6E5;
+  border-radius: var(--r); font-size: 13px; color: #D0006F; margin-bottom: 20px;
+}
+
+/* ACTIONS */
+.booking-actions { display: flex; gap: 10px; margin-top: 24px; }

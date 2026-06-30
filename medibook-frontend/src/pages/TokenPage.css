@@ -1,0 +1,43 @@
+.token-page {
+  min-height: 100vh; background: var(--bg); display: flex;
+  align-items: center; justify-content: center; padding: 24px;
+  background-image: radial-gradient(circle at 50% 0%, rgba(14,164,114,.08) 0%, transparent 60%);
+}
+.token-card { max-width: 400px; width: 100%; padding: 32px; text-align: center; }
+.token-header {
+  display: flex; align-items: center; gap: 14px; text-align: left; margin-bottom: 24px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--border);
+}
+.token-success-icon {
+  width: 44px; height: 44px; background: var(--accent-light); border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0;
+}
+.token-confirmed { font-size: 14px; font-weight: 600; color: var(--accent); }
+.token-id-text { font-size: 11px; color: var(--ink4); font-family: monospace; margin-top: 2px; }
+.token-serial-wrap { margin-bottom: 20px; }
+.token-serial-label { font-size: 11px; font-weight: 600; color: var(--ink4); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+.token-serial { font-family: var(--font-display); font-size: 64px; font-weight: 400; color: var(--primary); line-height: 1; }
+.token-qr-wrap {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--rl);
+  padding: 20px; display: inline-flex; margin-bottom: 10px;
+}
+.token-qr-hint { font-size: 12px; color: var(--ink4); margin-bottom: 20px; }
+.token-details {
+  background: var(--bg); border-radius: var(--r); padding: 14px;
+  display: flex; flex-direction: column; gap: 10px; text-align: left; margin-bottom: 12px;
+}
+.token-detail-row {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--ink2);
+}
+.token-detail-row svg { color: var(--ink4); flex-shrink: 0; }
+.token-expires { font-size: 11px; color: var(--ink4); }
+.token-loading {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 12px; font-size: 14px; color: var(--ink3);
+}
+
+@media print {
+  .token-page { background: white; }
+  .btn { display: none !important; }
+}
