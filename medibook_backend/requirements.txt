@@ -17,3 +17,4 @@ Pillow
 python-dotenv
 bcrypt
 pydantic[email]
+email-validator
