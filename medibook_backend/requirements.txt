@@ -16,3 +16,4 @@ aioredis
 Pillow
 python-dotenv
 bcrypt
+pydantic[email]
